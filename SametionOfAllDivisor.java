@@ -8,16 +8,15 @@ public class SametionOfAllDivisor {
 
     }
 
-    private static int samOfDivisors(int N) { 
-        int count = 0;
-        for(int i=1; i<=N; i++){
-            for(int j=1; j<=i; j++){
-                if(i%j==0){
-                    count += j ;
-                }
-             }
+    private static long samOfDivisors(int N) { 
+        long totalSum = 0;  // Use long to handle large sums
+
+        // Calculate the total sum using the formula
+        for (int i = 1; i <= N; i++) {
+            totalSum += (long) i * (N / i);  // Cast i to long to prevent overflow
         }
-        return count ;
+        
+        return totalSum;
     }
 }
 
