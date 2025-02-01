@@ -13,18 +13,19 @@ class Solution {
                 }
                 if (count == 26) return true;
             }
-                
             return false;
         }
 }
 public class IsPangram extends Solution {
     public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        String sentence = "qwertuiopasdfghjkylzxcvbnm";
-
-        Solution s1 = new Solution();
-        boolean res =  s1.checkIfPangram(sentence);
-
-        System.out.println(res);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter a sentence.");
+            String sentence = sc.nextLine();
+            
+            Solution s1 = new Solution();
+            boolean res =  s1.checkIfPangram(sentence);
+            
+            System.out.println(res);
+        }
     }
 }
