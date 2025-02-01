@@ -13,8 +13,8 @@ class Solution {
                 }
                 if (count == 26) return true;
             }
-            return false;
-        }
+        return false;
+    }
 }
 public class IsPangram extends Solution {
     public static void main(String args[]){
