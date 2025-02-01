@@ -2,11 +2,11 @@
 import java.util.Scanner;
 public class AmstrongNum {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter a number...");
-        int n = sc.nextInt();
-        System.out.println(amNum(n));
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter a number...");
+            int n = sc.nextInt();
+            System.out.println(amNum(n));
+        }
     }
 
     private static boolean amNum(int n) {
